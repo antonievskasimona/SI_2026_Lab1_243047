@@ -73,9 +73,11 @@ class Library {
                 }
                 return;
             }
+            return;
         }
-        System.out.println("Book not found.");
     }
+    System.out.println("Book not found.");
+}
 
     public void returnBook(String title) {
         for (Book book : books) {
@@ -133,6 +135,10 @@ public class SI2026Lab1Main {
         library.addBook(new Book("Effective Java", "Joshua Bloch", "Programming"));
         library.addBook(new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy"));
         library.addBook(new Book("1984", "George Orwell", "Dystopian"));
+
+        library.borrowBook("Clean Code");  
+        library.borrowBook("Clean Code");  
+        library.borrowBook("Nonexistent"); 
 
         System.out.println(library.searchBookByTitle("The Hobbit")); 
         System.out.println(library.searchBookByTitle("Harry Potter")); 
