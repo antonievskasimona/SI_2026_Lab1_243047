@@ -63,19 +63,19 @@ class Library {
 
     // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
-        for (Book book : books) {
-            if (book.getTitle().equalsIgnoreCase(title)) {
-                if (!book.isBorrowed()) {
-                    book.setBorrowed(true);
-                    System.out.println("Book borrowed.");
-                } else {
-                    System.out.println("Book is already borrowed.");
-                }
-                return;
+    for (Book book : books) {
+        if (book.getTitle().equalsIgnoreCase(title)) {
+            if (!book.isBorrowed()) {
+                book.setBorrowed(true);
+                System.out.println("Borrowed successfully.");
+            } else {
+                System.out.println("Book is already borrowed.");
             }
+            return;
         }
-        System.out.println("Book not found.");
     }
+    System.out.println("Book not found.");
+}
 
     public void returnBook(String title) {
         for (Book book : books) {
@@ -123,6 +123,10 @@ public class SI2026Lab1Main {
         library.addBook(new Book("Effective Java", "Joshua Bloch", "Programming"));
         library.addBook(new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy"));
         library.addBook(new Book("1984", "George Orwell", "Dystopian"));
+
+        library.borrowBook("Clean Code");  
+        library.borrowBook("Clean Code");  
+        library.borrowBook("Nonexistent"); 
 
         System.out.println(library.searchBookByTitle("The Hobbit")); 
         System.out.println(library.searchBookByTitle("Harry Potter")); 
