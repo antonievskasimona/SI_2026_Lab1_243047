@@ -1,0 +1,28 @@
+Документација 
+
+Дел 1, барање 13:
+Git команди кои што беа искористени:
+git checkout master
+git merge feature-search-books
+Спојувањето е биде fast-forward, што значи дека master „се поместува“ на врвот на feature гранката без нов commit за merge.
+
+Дел 1, барање 22
+Како излез од git status командата добив:
+On branch feature-borrow-book
+nothing to commit, working tree clean
+Се појави само еден конфликт во SI2026Lab1Main.java поради постоење на две различни пораки за успешно позајмување книги. 
+Конфликтот се реши на тој начин што прво се отвора фајлот SI2026Lab1Main.java, се бришат <<<<<<<, =======, >>>>>>> непотребни линии и се избира која од двете пораки за успешно позајмување на книга ќе биде финална.
+Како merge стратегија за решавање на конфликтот беше recursive merge, која што Git автоматски ја користи кај фајлови кои што јавуваат конфликт.
+
+Дел 1, барање 23
+Типот на merge беше fast-forward, затоа што на master гранката не се појави никаков конфликт.
+Пораката после git status наредбата е:
+On branch master
+nothing to commit, working tree clean 
+
+Дел 1, барање 24
+Повторно типот на merge беше fast-forward, затоа што на master гранката не се појави никаков конфликт.
+Пораката после git status наредбата е:
+On branch master
+nothing to commit, working tree clean
+
